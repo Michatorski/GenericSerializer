@@ -11,11 +11,12 @@ public class XmlTextElement extends XmlElement{
         this.value = value;
     }
 
-    public abstract  String  asString()
+    @Override
+    public  String  asString()
     {
-         String tagName = "name";
-         value = "Rocky";
-         String res = "<" +tagName+ ">" + value + "</" +tagName+ ">" ;
+//         String tagName = "name";
+//         value = "Rocky";
+         String res = "<" + getTagName()+ ">" + value + "</" +getTagName()+ ">" ;
 
          return res;
     }

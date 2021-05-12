@@ -21,6 +21,36 @@ public class XmlComplexElement extends  XmlElement{
         this.elements = elements;
     }
 
+//    @Override
+//    public String asString() {
+//        String fatherElementOpener = "<" + getTagName() +">";
+//        String fatherElementCloser = "</" + getTagName() +">";
+//        StringBuilder buffer = new StringBuilder();
+//
+//        for (XmlElement element: elements){
+//            //Construtendo un String con el bucle.
+//            buffer.append(element.asString());
+//            //Buffer = buffer + element;
+//        }
+//
+//        return fatherElementOpener + buffer.toString()+ fatherElementCloser;
+//    }
+
+    @Override
+    public String asString() {
+        String fatherElementOpener = "<" + getTagName() +">";
+        String fatherElementCloser = "</" + getTagName() +">";
+        StringBuilder buffer = new StringBuilder();
+
+        for (XmlElement element: elements){
+            //Construtendo un String con el bucle.
+            buffer.append(element.asString());
+            //Buffer = buffer + element;
+        }
+
+        return fatherElementOpener + buffer.toString()+ fatherElementCloser;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -17,6 +17,7 @@ public abstract class XmlElement {
         this.tagName = tagName;
     }
 
+    public abstract String asString();
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

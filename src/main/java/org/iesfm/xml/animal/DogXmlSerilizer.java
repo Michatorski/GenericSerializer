@@ -12,6 +12,8 @@ public class DogXmlSerilizer implements XmlSerializer<Dog> {
     public static final String NAME_TAG = "name";
     public static final String AGE_TAG= "age";
     public static final String COLOR_TAG = "calor";
+
+    //tag  del "padre"
     public static final String DOG_TAG = "dog";
 
     @Override
@@ -44,7 +46,5 @@ public class DogXmlSerilizer implements XmlSerializer<Dog> {
         elements.add(age);
 
        return new XmlComplexElement(DOG_TAG, elements);
-
-
     }
 }

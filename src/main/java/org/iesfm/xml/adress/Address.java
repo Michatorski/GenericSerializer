@@ -2,13 +2,13 @@ package org.iesfm.xml.adress;
 
 import java.util.Objects;
 
-public class Adress {
+public class Address {
     private String street;
     private int number;
     private String door;
     private String city;
 
-    public Adress(String street, int number, String door, String city) {
+    public Address(String street, int number, String door, String city) {
         this.street = street;
         this.number = number;
         this.door = door;
@@ -51,8 +51,8 @@ public class Adress {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Adress adress = (Adress) o;
-        return number == adress.number && Objects.equals(street, adress.street) && Objects.equals(door, adress.door) && Objects.equals(city, adress.city);
+        Address address = (Address) o;
+        return number == address.number && Objects.equals(street, address.street) && Objects.equals(door, address.door) && Objects.equals(city, address.city);
     }
 
     @Override
